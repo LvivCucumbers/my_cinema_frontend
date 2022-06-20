@@ -1,0 +1,110 @@
+@import url('./_variables.scss');
+$color-bondi-blue: #008dc1;
+$color-white-smoke: #f6f6f6;
+$color-yellow: #f0e130;
+$color-black: black;
+$color-pink-red: #ec2f4b;
+$color-suva-grey: #939393;
+$color-gull-grey: #9fa2b4;
+$ExtraBold: "ExtraBold";
+$Medium: "Medium";
+$Regular: "Regular";
+$LightItalic: "LightItalic";
+.sign-up-page-background {
+    margin: 0;
+    padding: 0;
+    background: "blue";
+    background: (to right, $color-pink-red, $color-bondi-blue);
+    background: linear-gradient(to right, $color-pink-red, $color-bondi-blue);
+    height: 100vh;
+    overflow: hidden;
+  }
+  .sign-up-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    h1 {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid silver;
+      font-family: $ExtraBold;
+      font-size: 33px;
+    }
+    form {
+      padding: 0 40px;
+      box-sizing: border-box;
+      .sign-up-main-txt {
+        position: relative;
+        border-bottom: 2px solid #adadad;
+        margin: 30px 0;
+      }
+    }
+    .sign-up-main-txt {
+      input {
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        background: none;
+        outline: none;
+        font-family: $Medium;
+        &:focus ~ label,
+        &:valid ~ label {
+          top: -5px;
+          font-family: $Medium;
+          color: $color-bondi-blue;
+        }
+        &:focus ~ span::before,
+        &:valid ~ span::before {
+          width: 100%;
+        }
+      }
+      label {
+        font-family: $Medium;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        color: #adadad;
+        transform: translateY(-50%);
+        font-size: 16px;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+      span::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: $color-bondi-blue;
+        transition: 0.5s;
+      }
+    }
+    input[type="submit"] {
+      width: 100%;
+      height: 50px;
+      border: 1px solid;
+      background: $color-bondi-blue;
+      border-radius: 25px;
+      font-size: 27px;
+      color: #e9f4fb;
+      cursor: pointer;
+      outline: none;
+      margin: 0 0 30px 0;
+      font-family: $ExtraBold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        border-color: $color-bondi-blue;
+        transition: 0.5s;
+      }
+    }
+  }
